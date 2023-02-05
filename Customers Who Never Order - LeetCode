@@ -1,0 +1,5 @@
+# Write an SQL query to report all customers who never order anything.
+
+SELECT a.name as Customers
+FROM Customers a
+WHERE a.id not in (SELECT customerId FROM Orders);
