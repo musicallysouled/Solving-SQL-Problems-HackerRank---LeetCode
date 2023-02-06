@@ -1,0 +1,11 @@
+#Write an SQL query to swap all 'f' and 'm' values with a single update statement and no intermediate temporary tables.
+
+UPDATE Salary SET sex= if(sex='f','m','f');
+
+#Could be also written like:
+
+UPDATE Salary SET sex= 
+CASE
+WHEN sex='f' THEN 'm'
+WHEN sex='m' THEN 'f'
+END;
