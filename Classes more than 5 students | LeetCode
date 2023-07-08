@@ -1,0 +1,4 @@
+select class
+from Courses
+gorup by class
+having Count(class)>=5
