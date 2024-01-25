@@ -1,0 +1,7 @@
+SELECT s.name
+  FROM students AS s
+       INNER JOIN Friends AS f USING(id)
+       INNER JOIN Packages AS p1 USING(id)
+       INNER JOIN Packages AS p2 ON f.friend_id = p2.id /*To compare between salary*/
+ WHERE p2.salary > p1.salary
+ ORDER BY p2.salary;
